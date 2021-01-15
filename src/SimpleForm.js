@@ -1,51 +1,51 @@
 import React, { useState } from "react";
 import "./style.css";
 
-export default function App() {
+const App = () => { 
   const [state, setState] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
-  const handleInputChange = (event) => {
-    console.log('event', event)
+  const handleChange = (event) => {
     setState((prevProps) => ({
       ...prevProps,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     }));
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(state);
+    // Send State
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <form onSubmit={handleSubmit}>
-        <div className="form-control">
+        <div className="form-input">
           <label>Email</label>
           <input
             type="text"
             name="email"
             value={state.email}
-            onChange={handleInputChange}
+            onChange={handleChange}
           />
         </div>
-        <div className="form-control">
+        <div className="form-input">
           <label>Password</label>
           <input
             type="password"
             name="password"
             value={state.password}
-            onChange={handleInputChange}
+            onChange={handleChange}
           />
         </div>
-        <div className="form-control">
+        <div className="form-input">
           <label></label>
           <button type="submit">Login</button>
         </div>
       </form>
     </div>
   );
-}
+};
+
+export default App;

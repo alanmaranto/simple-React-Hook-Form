@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SimpleForm from './SimpleForm';
 import FormHook from './FormHooks';
+import FormHookBasic from './FormHookBasic'
+import FormHookErrors from './FormHookErrors'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
