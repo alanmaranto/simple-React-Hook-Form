@@ -5,6 +5,8 @@ import "./style.css";
 const FormHookBasic = () => {
   const { register, handleSubmit, errors } = useForm();
 
+
+
   const onSubmit = (data) => {
     console.log("data", data);
   };

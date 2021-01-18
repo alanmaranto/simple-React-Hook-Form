@@ -4,6 +4,10 @@ import "./style.css";
 
 const FormHook = () => {
   const { register, handleSubmit, errors } = useForm();
+
+  console.log('register', register);
+  console.log('and handleSubmit', handleSubmit);
+  
   const onSubmit = (data) => {
       console.log(data)
   };
